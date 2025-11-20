@@ -16,22 +16,22 @@ const About = () => {
               </h2>
               
               <div className="space-y-6 text-lg text-mind-content-secondary leading-relaxed tracking-tight">
-                <p>
-                  Lorem <strong className="text-mind-content-primary">Ipsum</strong> – Lorem Ipsum. 
-                </p>
-                
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                
-                <p>
-                  W swojej karierze pomogłem ponad <strong className="text-mind-content-blue">200 firmom</strong> zbudować silne zespoły i zrekrutowałem ponad <strong className="text-mind-content-blue">500 specjalistów</strong> na różnych poziomach zaawansowania.
-                </p>
-                
-                <p>
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </div>
+  <p>
+    Przez ponad 10 lat pracowałem dla gigantów takich jak <strong className="text-mind-content-primary">GOG.com (CD Projekt Group), PepsiCo czy EY</strong>. Wiem, jak wyglądają światowe standardy HR.
+  </p>
+  
+  <p>
+    Jednak jako były <strong className="text-mind-content-primary">współwłaściciel restauracji</strong>, rozumiem też ból płacenia faktur i walki o rentowność. Moja misja jest prosta: Wzrost ludzi ma przekładać się na zysk firmy.
+  </p>
+  
+  <p>
+    Nie jestem typowym konsultantem z prezentacją w PowerPoincie. Jestem praktykiem. Zakasam rękawy, wchodzę w Twoje systemy (Slack, Jira, ATS) i działam ramię w ramię z Twoim zespołem jako <strong className="text-mind-content-blue">Fractional HR Manager</strong>.
+  </p>
+  
+  <p>
+   Posiadam certyfikaty: <strong className="text-mind-content-primary">Lean Six Sigma Green Belt</strong> oraz <strong className="text-mind-content-primary">ACSTH ICF Coach</strong>. Aktualnie zgłębiam wykorzystanie AI w HR.
+  </p>
+</div>
               
               <div className="flex gap-4 mt-8">
                 <button 
