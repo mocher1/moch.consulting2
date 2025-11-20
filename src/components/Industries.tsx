@@ -1,32 +1,32 @@
 import React from 'react';
-import { Laptop, Gamepad, Megaphone, ShoppingCart, Briefcase } from 'lucide-react';
+import { Laptop, Gamepad, Rocket, ShoppingCart, Building2 } from 'lucide-react'; // Zmieniłem ikony na bardziej pasujące
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const industries = [
   {
-    icon: Laptop,
-    title: 'IT & Tech',
-    description: 'Rekrutacja programistów, DevOps, QA, PM i innych specjalistów technicznych. Doradztwo HR i procesy wspierające rozwój zespołów technologicznych.'
-  },
-  {
     icon: Gamepad,
-    title: 'Gaming',
-    description: 'Pozyskiwanie talentów dla studiów gier i firm gamedev. Budowa ścieżek rozwoju, employer branding i wsparcie liderów zespołów kreatywnych.'
+    title: 'Gaming & Gamedev',
+    description: 'Doświadczenie prosto z Grupy CD Projekt. Rozumiem unikalną kulturę studiów gier, specyfikę ról artystyczno-technicznych oraz wyzwania związane z premierami (crunch, retention). Pomagam budować zespoły, które dowożą hity.'
   },
   {
-    icon: Megaphone,
-    title: 'Marketing',
-    description: 'Specjaliści digital marketing, growth, content i analityki. Wdrożenie procesów i narzędzi wspierających zespoły kreatywne.'
+    icon: Laptop,
+    title: 'IT & Software Houses',
+    description: 'Wiem, jak rozmawiać z Senior Developerami i jak budować kulturę inżynierską. Oprócz rekrutacji, wdrażam ścieżki kariery i systemy ocen, które zmniejszają rotację w Twoim software house.'
+  },
+  {
+    icon: Rocket,
+    title: 'Startups & Scaleups',
+    description: 'Twój biznes rośnie szybciej niż Twoje struktury? Jako Fractional HR wchodzę w chaos i układam procesy (onboarding, handbooki, levele), które są skalowalne, ale nie zabijają ducha startupu.'
   },
   {
     icon: ShoppingCart,
     title: 'E-commerce',
-    description: 'HR dla firm e-commerce: rekrutacja sprzedaży online, logistyki i customer experience. Optymalizacja procesów rekrutacyjnych i rozwój kadr wspierających szybki wzrost.'
+    description: 'Szybka rekrutacja i efektywność operacyjna. Pomagam skalować działy sprzedaży i obsługi klienta w szczytach sezonowych, dbając o twarde KPI i jakość zatrudnienia.'
   },
   {
-    icon: Briefcase,
-    title: 'White Collar',
-    description: 'Rekrutacje kadry menedżerskiej, finansowej, prawnej i biurowej. Strategiczne doradztwo HR – procedury, struktury i coaching liderów.'
+    icon: Building2,
+    title: 'Professional Services',
+    description: 'Standardy Wielkiej Czwórki (EY). Wspieram firmy doradcze, finansowe i prawne, gdzie liczy się najwyższy profesjonalizm, etyka pracy i precyzyjne zarządzanie talentami (up-or-out, evaluations).'
   }
 ];
 
@@ -38,15 +38,15 @@ const Industries = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl font-semibold text-mind-content-primary mb-6 tracking-tight">
-            Branże, w których działam
+            Rozumiem specyfikę Twojej branży
           </h2>
           <p className="text-xl text-mind-content-secondary max-w-3xl mx-auto leading-relaxed tracking-tight">
-            Wspieram firmy w budowaniu zespołów i procesów HR w kluczowych sektorach nowoczesnej gospodarki.
+            Nie stosuję metody "kopiuj-wklej". Moje doświadczenie w GOG, EY czy PepsiCo pozwala mi dopasować strategię HR do DNA Twojego sektora.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {/* Pierwsza linia - 3 karty */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Pierwsza linia - 3 karty (Gaming, IT, Startups) - to Twoje 'Core' */}
           {industries.slice(0, 3).map((industry, index) => {
             const Icon = industry.icon;
             return (
@@ -58,7 +58,7 @@ const Industries = () => {
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 <div className="bg-mind-surface-content-white rounded-2xl p-8 border border-mind-stroke-border-grey group-hover:border-mind-content-blue group-hover:shadow-lg transition-all duration-300 group-hover:scale-105 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-gradient-to-br from-mind-content-blue to-mind-green rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-mind-content-blue to-mind-green rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
                     <Icon className="w-8 h-8 text-mind-surface-content-white" />
                   </div>
                   
@@ -66,7 +66,7 @@ const Industries = () => {
                     {industry.title}
                   </h3>
                   
-                  <p className="text-mind-content-secondary leading-relaxed tracking-tight flex-1">
+                  <p className="text-mind-content-secondary leading-relaxed tracking-tight flex-1 text-base">
                     {industry.description}
                   </p>
                 </div>
@@ -75,7 +75,7 @@ const Industries = () => {
           })}
         </div>
         
-        {/* Druga linia - 2 karty wyśrodkowane */}
+        {/* Druga linia - 2 karty wyśrodkowane (E-commerce, Professional Services) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto mt-8">
           {industries.slice(3, 5).map((industry, index) => {
             const Icon = industry.icon;
@@ -88,7 +88,7 @@ const Industries = () => {
                 style={{ transitionDelay: `${(index + 3) * 200}ms` }}
               >
                 <div className="bg-mind-surface-content-white rounded-2xl p-8 border border-mind-stroke-border-grey group-hover:border-mind-content-blue group-hover:shadow-lg transition-all duration-300 group-hover:scale-105 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-gradient-to-br from-mind-content-blue to-mind-green rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-mind-content-blue to-mind-green rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
                     <Icon className="w-8 h-8 text-mind-surface-content-white" />
                   </div>
                   
@@ -96,7 +96,7 @@ const Industries = () => {
                     {industry.title}
                   </h3>
                   
-                  <p className="text-mind-content-secondary leading-relaxed tracking-tight flex-1">
+                  <p className="text-mind-content-secondary leading-relaxed tracking-tight flex-1 text-base">
                     {industry.description}
                   </p>
                 </div>
