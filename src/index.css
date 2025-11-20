@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Focus widoczny dla a11y */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
