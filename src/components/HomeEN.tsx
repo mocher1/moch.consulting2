@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroEN from './HeroEN';
 import ServicesEN from './ServicesEN';
-import Industries from './Industries';
+import IndustriesEN from './IndustriesEN';
 import Companies from './Companies';
 import WhyChooseMe from './WhyChooseMe';
 import Testimonials from './Testimonials';
@@ -13,7 +13,7 @@ const HomeEN = () => {
     <main className="pt-14 min-h-screen bg-mind-surface-content-white font-sans">
       <HeroEN />
       <ServicesEN />
-      <Industries />
+      <IndustriesEN />
       <Companies />
       <WhyChooseMe />
       <Testimonials />
