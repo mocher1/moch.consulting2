@@ -43,13 +43,13 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur border-b border-gray-200">
       <nav className="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
-          {/* LOGO OPCJA 2 - Tech Connect */}
+          {/* LOGO OPCJA 3 - Growth Graph */}
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-            <rect width="32" height="32" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
-            <circle cx="10" cy="16" r="3" fill="#1e3a8a" /> {/* Blue Node */}
-            <circle cx="22" cy="10" r="3" fill="#10b981" /> {/* Green Node */}
-            <circle cx="22" cy="22" r="3" fill="#1e3a8a" /> {/* Blue Node */}
-            <path d="M10 16L22 10M10 16L22 22" stroke="#1e3a8a" strokeWidth="2" strokeLinecap="round" />
+            <rect width="32" height="32" rx="8" className="fill-mind-content-blue" />
+            {/* Trzy słupki tworzące rosnący wykres / literę M */}
+            <rect x="7" y="14" width="4" height="10" rx="1" fill="white" fillOpacity="0.7" />
+            <rect x="14" y="10" width="4" height="14" rx="1" fill="white" />
+            <rect x="21" y="6" width="4" height="18" rx="1" fill="#10b981" /> {/* Zielony akcent na wzrost */}
           </svg>
           <div className="flex flex-col">
             <span className="font-bold text-mind-content-primary text-lg leading-none tracking-tight">moch</span>
