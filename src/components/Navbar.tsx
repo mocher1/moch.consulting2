@@ -91,7 +91,6 @@ export default function Navbar() {
                 <rect width="16" height="6" fill="#ffffff"/>
                 <rect y="6" width="16" height="6" fill="#dc143c"/>
               </svg>
-              <span className="text-base">🇵🇱</span>
               PL
             </Link>
             <Link
@@ -107,7 +106,6 @@ export default function Navbar() {
                 <path d="M8 0v12M0 6h16" stroke="#ffffff" strokeWidth="2"/>
                 <path d="M8 0v12M0 6h16" stroke="#c8102e" strokeWidth="1.2"/>
               </svg>
-              <span className="text-base">🇬🇧</span>
               EN
             </Link>
           </div>
@@ -132,7 +130,6 @@ export default function Navbar() {
               <rect width="16" height="6" fill="#ffffff"/>
               <rect y="6" width="16" height="6" fill="#dc143c"/>
             </svg>
-            <span className="text-base">🇵🇱</span>
             <span className="hidden sm:inline">PL</span>
           </Link>
           <Link
@@ -148,7 +145,6 @@ export default function Navbar() {
               <path d="M8 0v12M0 6h16" stroke="#ffffff" strokeWidth="2"/>
               <path d="M8 0v12M0 6h16" stroke="#c8102e" strokeWidth="1.2"/>
             </svg>
-            <span className="text-base">🇬🇧</span>
             <span className="hidden sm:inline">EN</span>
           </Link>
         </div>
