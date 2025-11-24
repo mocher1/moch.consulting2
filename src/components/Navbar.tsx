@@ -43,13 +43,22 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur border-b border-gray-200">
       <nav className="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
-          {/* LOGO OPCJA 3 - Growth Graph */}
+          {/* LOGO - HR Talent Bridge */}
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-            <rect width="32" height="32" rx="8" className="fill-mind-content-blue" />
-            {/* Trzy słupki tworzące rosnący wykres / literę M */}
-            <rect x="7" y="14" width="4" height="10" rx="1" fill="white" fillOpacity="0.7" />
-            <rect x="14" y="10" width="4" height="14" rx="1" fill="white" />
-            <rect x="21" y="6" width="4" height="18" rx="1" fill="#10b981" /> {/* Zielony akcent na wzrost */}
+            <rect width="32" height="32" rx="8" fill="url(#logo-gradient)" />
+            {/* Stylizowana litera M z połączeniami */}
+            <path d="M6 24V12L12 18L16 14L20 18L26 12V24" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+            {/* Punkty połączeń reprezentujące talenty */}
+            <circle cx="12" cy="18" r="1.5" fill="white" />
+            <circle cx="20" cy="18" r="1.5" fill="white" />
+            {/* Gradient tło */}
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#0069ff" /> {/* mind-content-blue */}
+                <stop offset="0.6" stopColor="#2dca8c" /> {/* mind-green */}
+                <stop offset="1" stopColor="#10b981" />
+              </linearGradient>
+            </defs>
           </svg>
           <div className="flex flex-col">
             <span className="font-bold text-mind-content-primary text-lg leading-none tracking-tight">moch</span>
