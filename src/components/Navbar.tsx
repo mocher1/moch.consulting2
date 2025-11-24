@@ -87,7 +87,10 @@ export default function Navbar() {
                 !isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black hover:bg-gray-100'
               }`}
             >
-              <span className="text-base">🇵🇱</span>
+              <svg width="16" height="12" viewBox="0 0 16 12" className="shrink-0">
+                <rect width="16" height="6" fill="#ffffff"/>
+                <rect y="6" width="16" height="6" fill="#dc143c"/>
+              </svg>
               <span className="text-base">🇵🇱</span>
               PL
             </Link>
@@ -97,7 +100,13 @@ export default function Navbar() {
                 isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black hover:bg-gray-100'
               }`}
             >
-              <span className="text-base">🇬🇧</span>
+              <svg width="16" height="12" viewBox="0 0 16 12" className="shrink-0">
+                <rect width="16" height="12" fill="#012169"/>
+                <path d="M0 0l16 12M16 0L0 12" stroke="#ffffff" strokeWidth="1.5"/>
+                <path d="M0 0l16 12M16 0L0 12" stroke="#c8102e" strokeWidth="1"/>
+                <path d="M8 0v12M0 6h16" stroke="#ffffff" strokeWidth="2"/>
+                <path d="M8 0v12M0 6h16" stroke="#c8102e" strokeWidth="1.2"/>
+              </svg>
               <span className="text-base">🇬🇧</span>
               EN
             </Link>
@@ -119,7 +128,10 @@ export default function Navbar() {
               !isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black'
             }`}
           >
-            <span className="text-base">🇵🇱</span>
+            <svg width="16" height="12" viewBox="0 0 16 12" className="shrink-0">
+              <rect width="16" height="6" fill="#ffffff"/>
+              <rect y="6" width="16" height="6" fill="#dc143c"/>
+            </svg>
             <span className="text-base">🇵🇱</span>
             <span className="hidden sm:inline">PL</span>
           </Link>
@@ -129,7 +141,13 @@ export default function Navbar() {
               isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black'
             }`}
           >
-            <span className="text-base">🇬🇧</span>
+            <svg width="16" height="12" viewBox="0 0 16 12" className="shrink-0">
+              <rect width="16" height="12" fill="#012169"/>
+              <path d="M0 0l16 12M16 0L0 12" stroke="#ffffff" strokeWidth="1.5"/>
+              <path d="M0 0l16 12M16 0L0 12" stroke="#c8102e" strokeWidth="1"/>
+              <path d="M8 0v12M0 6h16" stroke="#ffffff" strokeWidth="2"/>
+              <path d="M8 0v12M0 6h16" stroke="#c8102e" strokeWidth="1.2"/>
+            </svg>
             <span className="text-base">🇬🇧</span>
             <span className="hidden sm:inline">EN</span>
           </Link>
