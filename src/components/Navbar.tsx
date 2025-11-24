@@ -118,23 +118,3 @@ export default function Navbar() {
     </header>
   );
 }
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className={`text-sm transition-colors ${active === l.href ? "text-black font-medium" : "text-gray-600 hover:text-black"}`}
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <a
-          href="#contact"
-          className="hidden md:inline-flex text-sm px-4 py-2 rounded-xl bg-black text-white hover:opacity-90 focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 transition-all"
-        >
-          Umów konsultację
-        </a>
-      </nav>
-    </header>
-  );
-}
