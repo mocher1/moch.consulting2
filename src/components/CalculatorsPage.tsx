@@ -10,5 +10,3 @@ const CalculatorsPage = () => {
 };
 
 export default CalculatorsPage;
-
-export default CalculatorsPage
