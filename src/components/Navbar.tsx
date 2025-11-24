@@ -43,11 +43,17 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur border-b border-gray-200">
       <nav className="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
-          <div className="relative">
-            <div className="w-8 h-8 bg-gradient-to-br from-mind-content-blue to-mind-green rounded-lg flex items-center justify-center">
-              <div className="w-4 h-4 bg-white rounded-sm transform rotate-45"></div>
-            </div>
-          </div>
+          {/* LOGO OPCJA 1 - Modern Monogram */}
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+            <rect width="32" height="32" rx="8" fill="url(#bg-gradient)" />
+            <path d="M8 22V10L16 16L24 10V22" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <defs>
+              <linearGradient id="bg-gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#1e3a8a" /> {/* mind-content-blue */}
+                <stop offset="1" stopColor="#10b981" /> {/* mind-green */}
+              </linearGradient>
+            </defs>
+          </svg>
           <div className="flex flex-col">
             <span className="font-bold text-mind-content-primary text-lg leading-none tracking-tight">moch</span>
             <span className="font-medium text-mind-content-blue text-xs leading-none tracking-tight">.consulting</span>
