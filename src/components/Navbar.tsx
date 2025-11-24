@@ -43,16 +43,13 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur border-b border-gray-200">
       <nav className="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
-          {/* LOGO OPCJA 1 - Modern Monogram */}
+          {/* LOGO OPCJA 2 - Tech Connect */}
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-            <rect width="32" height="32" rx="8" fill="url(#bg-gradient)" />
-            <path d="M8 22V10L16 16L24 10V22" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-            <defs>
-              <linearGradient id="bg-gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#1e3a8a" /> {/* mind-content-blue */}
-                <stop offset="1" stopColor="#10b981" /> {/* mind-green */}
-              </linearGradient>
-            </defs>
+            <rect width="32" height="32" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
+            <circle cx="10" cy="16" r="3" fill="#1e3a8a" /> {/* Blue Node */}
+            <circle cx="22" cy="10" r="3" fill="#10b981" /> {/* Green Node */}
+            <circle cx="22" cy="22" r="3" fill="#1e3a8a" /> {/* Blue Node */}
+            <path d="M10 16L22 10M10 16L22 22" stroke="#1e3a8a" strokeWidth="2" strokeLinecap="round" />
           </svg>
           <div className="flex flex-col">
             <span className="font-bold text-mind-content-primary text-lg leading-none tracking-tight">moch</span>
