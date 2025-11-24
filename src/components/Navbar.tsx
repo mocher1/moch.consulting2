@@ -75,7 +75,7 @@ export default function Navbar() {
                 !isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black hover:bg-gray-100'
               }`}
             >
-              🇵🇱 PL
+              <span className="text-base">🇵🇱</span> PL
             </Link>
             <Link
               to="/en"
@@ -83,7 +83,7 @@ export default function Navbar() {
                 isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black hover:bg-gray-100'
               }`}
             >
-              🇬🇧 EN
+              <span className="text-base">🇬🇧</span> EN
             </Link>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function Navbar() {
               !isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black'
             }`}
           >
-            🇵🇱
+            <span className="text-base">🇵🇱</span>
           </Link>
           <Link
             to="/en"
@@ -111,7 +111,7 @@ export default function Navbar() {
               isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black'
             }`}
           >
-            🇬🇧
+            <span className="text-base">🇬🇧</span>
           </Link>
         </div>
       </nav>
