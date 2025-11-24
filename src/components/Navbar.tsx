@@ -88,6 +88,7 @@ export default function Navbar() {
               }`}
             >
               <span className="text-base">🇵🇱</span>
+              <span className="text-base">🇵🇱</span>
               PL
             </Link>
             <Link
@@ -96,6 +97,7 @@ export default function Navbar() {
                 isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black hover:bg-gray-100'
               }`}
             >
+              <span className="text-base">🇬🇧</span>
               <span className="text-base">🇬🇧</span>
               EN
             </Link>
@@ -118,6 +120,7 @@ export default function Navbar() {
             }`}
           >
             <span className="text-base">🇵🇱</span>
+            <span className="text-base">🇵🇱</span>
             <span className="hidden sm:inline">PL</span>
           </Link>
           <Link
@@ -126,6 +129,7 @@ export default function Navbar() {
               isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black'
             }`}
           >
+            <span className="text-base">🇬🇧</span>
             <span className="text-base">🇬🇧</span>
             <span className="hidden sm:inline">EN</span>
           </Link>
