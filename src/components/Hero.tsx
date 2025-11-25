@@ -37,3 +37,5 @@ const Hero = () => {
             Twój biznes potrzebuje wsparcia HR, ale nie stać Cię na pełnoetatowego Senior HR Managera? 
             Zyskaj dostęp do doświadczonego specjalisty na ułamek kosztów tradycyjnego zatrudnienia.
           </p>
+  )
+}
