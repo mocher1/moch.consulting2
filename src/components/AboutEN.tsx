@@ -62,4 +62,4 @@ const AboutEN = () => {
               {/* CTA BUTTONS */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <button 
-                  className="flex items-center justify-center gap-3 bg-mind-content-blue hover:bg-mind-hover-blue text-white px-8 py-4 rounded
+                  className="flex items-center justify-center gap-3 bg-mind-content-blue hover:bg-mind-hover-blue text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
