@@ -29,7 +29,12 @@ export default function Navbar() {
   const [active, setActive] = useState<string>("#");
 
   useEffect(() => {
-    const sections = links.map(l => document.querySelector(l.href) as HTMLElement).filter(Boolean);
+    // Only observe hash-based links (sections), not route-based links
+    const hashLinks = links.filter(l => l.href.startsWith('#'));
+    const sections = hashLinks.map(l => document.querySelector(l.href) as HTMLElement).filter(Boolean);
+    
+    if (sections.length === 0) return;
+    
     const obs = new IntersectionObserver(
       entries => {
         entries.forEach(e => {
@@ -40,7 +45,17 @@ export default function Navbar() {
     );
     sections.forEach(s => obs.observe(s));
     return () => obs.disconnect();
-  }, [links]);
+  }, [links, location.pathname]);
+
+  // Handle active state for route-based links
+  useEffect(() => {
+    if (location.pathname === '/kalkulatory') {
+      setActive('/kalkulatory');
+    } else if (location.pathname === '/' || location.pathname === '/en') {
+      // Reset to default for home pages - will be handled by intersection observer
+      setActive('#');
+    }
+  }, [location.pathname]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur border-b border-gray-200">
