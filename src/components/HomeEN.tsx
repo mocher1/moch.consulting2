@@ -3,11 +3,12 @@ import HeroEN from './HeroEN';
 import ServicesEN from './ServicesEN';
 import IndustriesEN from './IndustriesEN';
 import Companies from './Companies';
-import WhyChooseMe from './WhyChooseMe';
-import Testimonials from './Testimonials';
+import WhyChooseMeEN from './WhyChooseMeEN';
+import TestimonialsEN from './TestimonialsEN';
 import AboutEN from './AboutEN';
 import FAQEN from './FAQEN';
 import ContactEN from './ContactEN';
+import Footer from './Footer';
 
 const HomeEN = () => {
   return (
@@ -16,11 +17,12 @@ const HomeEN = () => {
       <ServicesEN />
       <IndustriesEN />
       <Companies />
-      <WhyChooseMe />
-      <Testimonials />
+      <WhyChooseMeEN />
+      <TestimonialsEN />
       <AboutEN />
       <FAQEN />
       <ContactEN />
+      <Footer lang="en" />
     </main>
   );
 };

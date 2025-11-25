@@ -4,15 +4,14 @@ import Navbar from './components/Navbar';
 import HomePL from './components/HomePL';
 import HomeEN from './components/HomeEN';
 import CalculatorsPage from './components/CalculatorsPage';
-import Footer from './components/Footer';
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<><HomePL /><Footer /></>} />
-        <Route path="/en" element={<><HomeEN /><Footer /></>} />
+        <Route path="/" element={<HomePL />} />
+        <Route path="/en" element={<HomeEN />} />
         <Route path="/kalkulatory" element={<CalculatorsPage />} />
       </Routes>
     </>

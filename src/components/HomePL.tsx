@@ -21,6 +21,7 @@ const HomePL = () => {
       <About />
       <FAQ />
       <Contact />
+      <Footer lang="pl" />
     </main>
   );
 };
