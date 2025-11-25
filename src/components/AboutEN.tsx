@@ -63,5 +63,49 @@ const AboutEN = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button 
                   className="flex items-center justify-center gap-3 bg-mind-content-blue hover:bg-mind-hover-blue text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  onClick={() => window.open('https://linkedin.com/in/your-profile', '_blank')}
+                >
+                  <Linkedin size={20} />
+                  Connect on LinkedIn
+                </button>
+                
+                <button 
+                  className="flex items-center justify-center gap-3 bg-white hover:bg-gray-50 text-mind-content-blue border-2 border-mind-content-blue px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  onClick={() => window.location.href = 'mailto:contact@example.com'}
+                >
+                  <Mail size={20} />
+                  Send Email
+                </button>
+              </div>
+            </div>
+
+            {/* PROFILE IMAGE */}
+            <div className="order-1 lg:order-2">
+              <div className="relative">
+                <div className="w-80 h-80 mx-auto bg-gradient-to-br from-mind-content-blue to-blue-600 rounded-2xl shadow-2xl overflow-hidden">
+                  <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                    <div className="text-white text-center">
+                      <Briefcase size={64} className="mx-auto mb-4 opacity-80" />
+                      <p className="text-lg font-semibold">Professional Photo</p>
+                      <p className="text-sm opacity-80">Coming Soon</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Floating elements */}
+                <div className="absolute -top-4 -right-4 bg-white p-3 rounded-xl shadow-lg">
+                  <CheckCircle className="w-6 h-6 text-mind-green" />
+                </div>
+                <div className="absolute -bottom-4 -left-4 bg-white p-3 rounded-xl shadow-lg">
+                  <Globe className="w-6 h-6 text-mind-content-blue" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
+
+export default AboutEN;
