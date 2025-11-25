@@ -1,108 +1,125 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Clock, Users, Briefcase, TrendingUp, Award } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
-const testimonials = [
-  {
-    quote: "Rafał pomógł nam zrekrutować 15 deweloperów w ciągu 3 miesięcy. Jego znajomość rynku IT jest niezrównana.",
-    name: "Anna Kowalska",
-    position: "CTO, TechStartup",
-    company: "Warsaw"
-  },
-  {
-    quote: "Dzięki strategii employer branding, którą opracował Rafał, otrzymujemy 3x więcej aplikacji od top kandydatów.",
-    name: "Michał Nowak",
-    position: "Head of People",
-    company: "GameStudio"
-  },
-  {
-    quote: "Profesjonalizm, szybkość i jakość kandydatów - w rekrutacji nie można chcieć więcej. Polecam każdej firmie IT.",
-    name: "Katarzyna Wiśniewska",
-    position: "CEO",
-    company: "MarketingPro"
-  }
-];
-
-const Testimonials = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+// Funkcja pomocnicza do animacji liczb
+const Counter = ({ end, suffix = '', duration = 2000 }) => {
+  const [count, setCount] = useState(0);
   const [ref, isVisible] = useIntersectionObserver();
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    
-    return () => clearInterval(interval);
-  }, []);
+    if (!isVisible) return;
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
+    let startTime;
+    let animationFrame;
 
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = timestamp - startTime;
+      const percentage = Math.min(progress / duration, 1);
+      
+      // Easing function (easeOutExpo) dla płynniejszego efektu
+      const ease = percentage === 1 ? 1 : 1 - Math.pow(2, -10 * percentage);
+      
+      setCount(Math.floor(end * ease));
+
+      if (progress < duration) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrame);
+  }, [end, duration, isVisible]);
 
   return (
-    <section id="testimonials" ref={ref} className="py-24 bg-gradient-to-b from-mind-surface-bg-grey to-mind-surface-content-white">
-      <div className="max-w-5xl mx-auto px-6">
+    <span ref={ref} className="font-bold tabular-nums">
+      {count}{suffix}
+    </span>
+  );
+};
+
+const stats = [
+  {
+    icon: Clock,
+    value: 40,
+    suffix: '%',
+    label: 'Krótszy czas rekrutacji',
+    subtext: 'Redukcja Time-to-Hire (z 63 do 38 dni) dzięki optymalizacji procesów.'
+  },
+  {
+    icon: Briefcase,
+    value: 10,
+    suffix: '+',
+    label: 'Lat doświadczenia',
+    subtext: 'Praca dla gigantów rynku: GOG.com, PepsiCo, EY.'
+  },
+  {
+    icon: Users,
+    value: 45,
+    suffix: '+',
+    label: 'Ról rocznie',
+    subtext: 'Średnia liczba zamykanych procesów jako Senior Recruiter.'
+  },
+  {
+    icon: Award,
+    value: 20,
+    suffix: '+',
+    label: 'Warsztatów Lean',
+    subtext: 'Przeprowadzonych szkoleń z optymalizacji i Change Managementu.'
+  }
+];
+
+const Testimonials = () => { // Nazwa komponentu została dla kompatybilności z App.tsx
+  const [ref, isVisible] = useIntersectionObserver();
+
+  return (
+    <section id="results" ref={ref} className="py-24 bg-mind-content-primary text-white relative overflow-hidden">
+      {/* Tło dekoracyjne */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-10">
+        <div className="absolute right-0 top-0 w-96 h-96 bg-mind-content-blue rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute left-0 bottom-0 w-64 h-64 bg-mind-green rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-4xl md:text-5xl font-semibold text-mind-content-primary mb-6 tracking-tight">
-            Opinie klientów
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Nie obiecuję. <span className="text-mind-green">Dowożę wyniki.</span>
           </h2>
-          <p className="text-xl text-mind-content-secondary max-w-3xl mx-auto leading-relaxed tracking-tight">
-            Zobacz, co mówią firmy, z którymi współpracowałem
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            W HR liczy się empatia, ale w biznesie liczą się efekty. Oto liczby, które stoją za moim doświadczeniem.
           </p>
         </div>
-        
-        <div className="relative">
-          <div className="bg-mind-surface-content-white rounded-3xl shadow-xl p-12 border border-mind-stroke-border-grey">
-            <Quote className="w-16 h-16 text-mind-content-blue mx-auto mb-8" />
-            
-            <div className="text-center">
-              <p className="text-2xl text-mind-content-primary mb-8 leading-relaxed italic tracking-tight">
-                "{testimonials[currentIndex].quote}"
-              </p>
-              
-              <div>
-                <h4 className="text-xl font-semibold text-mind-content-primary tracking-tight">
-                  {testimonials[currentIndex].name}
-                </h4>
-                <p className="text-mind-content-blue font-medium tracking-tight">
-                  {testimonials[currentIndex].position}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index) => {
+            const Icon = stat.icon;
+            return (
+              <div 
+                key={index}
+                className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${
+                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
+                <div className="w-12 h-12 bg-mind-content-blue/20 rounded-xl flex items-center justify-center text-mind-content-blue mb-6 group-hover:scale-110 transition-transform">
+                  <Icon size={24} className="text-mind-green" />
+                </div>
+                
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                  <Counter end={stat.value} suffix={stat.suffix} />
+                </div>
+                
+                <p className="text-lg font-semibold text-gray-200 mb-3">
+                  {stat.label}
                 </p>
-                <p className="text-mind-content-secondary tracking-tight">
-                  {testimonials[currentIndex].company}
+                
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {stat.subtext}
                 </p>
               </div>
-            </div>
-          </div>
-          
-          <button
-            onClick={prevTestimonial}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-mind-surface-content-white rounded-full shadow-lg border border-mind-stroke-border-grey flex items-center justify-center hover:bg-mind-surface-light-blue hover:border-mind-content-blue transition-all duration-300 hover:scale-110"
-          >
-            <ChevronLeft className="w-6 h-6 text-mind-content-secondary" />
-          </button>
-          
-          <button
-            onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-mind-surface-content-white rounded-full shadow-lg border border-mind-stroke-border-grey flex items-center justify-center hover:bg-mind-surface-light-blue hover:border-mind-content-blue transition-all duration-300 hover:scale-110"
-          >
-            <ChevronRight className="w-6 h-6 text-mind-content-secondary" />
-          </button>
-          
-          <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? 'bg-mind-content-blue' : 'bg-mind-stroke-border-grey hover:bg-mind-content-secondary'
-                }`}
-              />
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
