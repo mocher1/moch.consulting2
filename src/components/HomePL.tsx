@@ -8,6 +8,7 @@ import Testimonials from './Testimonials';
 import About from './About';
 import FAQ from './FAQ';
 import Contact from './Contact';
+import Footer from './Footer';
 
 const HomePL = () => {
   return (
