@@ -33,4 +33,7 @@ const Hero = () => {
             na ułamek etatu.
           </h1>
           
-          <p className="text-xl text-mind-content-secondary mb-8 leading-relaxed max-
+          <p className="text-xl text-mind-content-secondary mb-8 leading-relaxed max-w-xl">
+            Twój biznes potrzebuje wsparcia HR, ale nie stać Cię na pełnoetatowego Senior HR Managera? 
+            Zyskaj dostęp do doświadczonego specjalisty na ułamek kosztów tradycyjnego zatrudnienia.
+          </p>
