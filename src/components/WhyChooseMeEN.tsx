@@ -1,27 +1,27 @@
 import React from 'react';
-import { Clock, Globe, Award, Zap } from 'lucide-react';
+import { Clock, ShieldCheck, MessageSquare, MonitorPlay } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const advantages = [
   {
     icon: Clock,
-    title: 'Cost Efficiency',
-    description: 'Access top-tier Polish developers at 40-60% lower costs than Western Europe, without compromising on quality'
+    title: 'Ideal Time Zone Alignment',
+    description: 'Based in Central Europe (CET/CEST). I overlap heavily with US East Coast mornings and cover the entire UK/EU business day. No more 3 AM calls.'
   },
   {
-    icon: Globe,
-    title: 'Time Zone Overlap',
-    description: 'Perfect alignment with EU/UK business hours. Real-time collaboration with your existing teams'
+    icon: ShieldCheck,
+    title: 'EU Legal & IP Standards',
+    description: 'Unlike hiring in Asia or South America, candidates from Poland/CEE operate under strict EU laws (GDPR). I ensure your Intellectual Property is 100% safe.'
   },
   {
-    icon: Award,
-    title: 'EU Standards',
-    description: 'GDPR compliance, EU work regulations, and Western business culture. No legal complications'
+    icon: MessageSquare,
+    title: 'No Language Barrier',
+    description: 'I only present candidates with verified C1/C2 English. Polish developers are ranked #11 in the world for English proficiency (EF EPI Index).'
   },
   {
-    icon: Zap,
-    title: 'Proven Track Record',
-    description: 'Hundreds of successful placements for startups, scale-ups and international corporations since 2019'
+    icon: MonitorPlay,
+    title: 'Western Work Culture',
+    description: 'Candidates from this region are known for "ownership". They don\'t just code tasks; they solve business problems and challenge bad specs.'
   }
 ];
 
@@ -29,38 +29,41 @@ const WhyChooseMeEN = () => {
   const [ref, isVisible] = useIntersectionObserver();
 
   return (
-    <section id="why" ref={ref} className="py-24 bg-mind-surface-content-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-4xl md:text-5xl font-semibold text-mind-content-primary mb-6 tracking-tight">
-            Why Hire Polish Tech Talent?
+    <section className="py-24 bg-mind-content-primary text-white relative overflow-hidden">
+      {/* Tło - mapa świata (abstrakcyjna) lub kropki */}
+      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div ref={ref} className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Why CEE Region? Why Me?
           </h2>
-          <p className="text-xl text-mind-content-secondary max-w-3xl mx-auto leading-relaxed tracking-tight">
-            Combining world-class technical skills with European business standards and cost efficiency
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Hiring remotely shouldn't feel distant. I bridge the gap between your HQ and the best engineering talent in Europe.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
-          {advantages.map((advantage, index) => {
-            const Icon = advantage.icon;
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {advantages.map((adv, index) => {
+            const Icon = adv.icon;
             return (
               <div
                 key={index}
-                className={`text-center group transition-all duration-700 ${
+                className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-mind-green to-mind-green-26 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <Icon className="w-10 h-10 text-mind-surface-content-white" />
+                <div className="w-14 h-14 bg-mind-content-blue/20 rounded-xl flex items-center justify-center text-mind-green mb-6 group-hover:scale-110 transition-transform">
+                  <Icon size={28} />
                 </div>
                 
-                <h3 className="text-xl font-semibold text-mind-content-primary mb-4 tracking-tight">
-                  {advantage.title}
+                <h3 className="text-xl font-bold mb-4 text-white">
+                  {adv.title}
                 </h3>
                 
-                <p className="text-mind-content-secondary leading-relaxed tracking-tight">
-                  {advantage.description}
+                <p className="text-gray-400 leading-relaxed text-sm">
+                  {adv.description}
                 </p>
               </div>
             );
