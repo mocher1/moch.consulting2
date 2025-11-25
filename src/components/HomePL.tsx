@@ -6,6 +6,7 @@ import Companies from './Companies';
 import WhyChooseMe from './WhyChooseMe';
 import Testimonials from './Testimonials';
 import About from './About';
+import FAQ from './FAQ';
 import Contact from './Contact';
 
 const HomePL = () => {
@@ -18,6 +19,7 @@ const HomePL = () => {
       <WhyChooseMe />
       <Testimonials />
       <About />
+      <FAQ />
       <Contact />
     </main>
   );

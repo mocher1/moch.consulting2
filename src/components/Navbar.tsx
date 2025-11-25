@@ -7,6 +7,7 @@ const LINKS_PL = [
   { href: "#why", label: "Dlaczego ja" },
   { href: "#testimonials", label: "Opinie" },
   { href: "#about", label: "O mnie" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Kontakt" }
 ];
 
@@ -16,6 +17,7 @@ const LINKS_EN = [
   { href: "#why", label: "Why Me" },
   { href: "#testimonials", label: "Testimonials" },
   { href: "#about", label: "About" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" }
 ];
 

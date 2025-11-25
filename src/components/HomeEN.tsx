@@ -6,6 +6,7 @@ import Companies from './Companies';
 import WhyChooseMe from './WhyChooseMe';
 import Testimonials from './Testimonials';
 import AboutEN from './AboutEN';
+import FAQEN from './FAQEN';
 import ContactEN from './ContactEN';
 
 const HomeEN = () => {
@@ -18,6 +19,7 @@ const HomeEN = () => {
       <WhyChooseMe />
       <Testimonials />
       <AboutEN />
+      <FAQEN />
       <ContactEN />
     </main>
   );
