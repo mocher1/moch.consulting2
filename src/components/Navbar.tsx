@@ -9,7 +9,6 @@ const LINKS_PL = [
   { href: "#about", label: "O mnie" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Kontakt" },
-  { href: "/kalkulatory", label: "Kalkulatory" }
 ];
 
 const LINKS_EN = [
