@@ -32,21 +32,6 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-mind-content-secondary mb-10 leading-relaxed max-w-3xl mx-auto">
             Wchodzę do firmy, układam chaos, wdrażam standardy i rekrutuję kluczowe talenty. Działam jak członek Twojego zarządu, ale bez kosztów pełnego etatu.
           </p>
-
-          {/* AUTHORITY BADGES - Wyśrodkowane */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12 text-sm font-medium text-gray-500">
-             <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-xl border border-gray-100 shadow-sm transition-transform hover:-translate-y-1">
-                <Briefcase size={18} className="text-mind-content-blue"/>
-                <span className="text-mind-content-primary font-bold">Ex-CD PROJEKT Group</span>
-             </div>
-             <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-xl border border-gray-100 shadow-sm transition-transform hover:-translate-y-1">
-                <TrendingUp size={18} className="text-mind-green"/>
-                <span className="text-mind-content-primary font-bold">Lean Six Sigma Certified</span>
-             </div>
-             <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-xl border border-gray-100 shadow-sm transition-transform hover:-translate-y-1">
-                <span className="text-mind-content-primary font-bold">10+ Lat Doświadczenia</span>
-             </div>
-          </div>
           
           {/* CTA Buttons - Wyśrodkowane */}
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
