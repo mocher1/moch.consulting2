@@ -9,7 +9,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[55vh] bg-gradient-to-br from-mind-warm-white via-white to-mind-light-grey flex items-center justify-center px-6 overflow-hidden">
+    <section className="relative min-h-[65vh] bg-gradient-to-br from-mind-warm-white via-white to-mind-light-grey flex items-center justify-center px-6 overflow-hidden">
       {/* Tło dekoracyjne - subtelne, centralne */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-mind-content-blue/5 via-transparent to-transparent pointer-events-none"></div>
       
