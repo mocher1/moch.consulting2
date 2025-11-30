@@ -117,46 +117,44 @@ const SavingsCalculator = () => {
                 <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg border border-white/5">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-red-400"></div>
-                    <span className="text-sm">Koszt Senior HR (z narzutami)</span>
+                    <span className="text-gray-300 text-sm md:text-base">Pełny etat Dyrektora:</span>
                   </div>
-                  <span className="font-semibold">-{fullTimeCostYearly.toLocaleString()} PLN</span>
+                  <span className="text-gray-300 font-medium whitespace-nowrap">~{Math.round(fullTimeCostYearly).toLocaleString()} zł</span>
                 </div>
 
-                {/* Linia 2: Koszt Fractional */}
-                <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg border border-white/5">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                    <span className="text-sm">Koszt Moch Consulting</span>
-                  </div>
-                  <span className="font-semibold">-{fractionalCostYearly.toLocaleString()} PLN</span>
-                </div>
-
-                {/* Linia 3: Oszczędności na agencjach */}
-                <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg border border-white/5">
+                {/* Linia 2: Koszt Moch */}
+                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg border border-white/20">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-mind-green"></div>
-                    <span className="text-sm">Oszczędność na agencjach</span>
+                    <span className="text-white font-bold text-sm md:text-base">Model Fractional (Moch):</span>
                   </div>
-                  <span className="font-semibold text-mind-green">+{agencySavings.toLocaleString()} PLN</span>
+                  <span className="text-white font-bold whitespace-nowrap">{fractionalCostYearly.toLocaleString()} zł</span>
+                </div>
+
+                {/* Linia 3: Bonus Agencje */}
+                <div className="flex justify-between items-center p-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-mind-content-blue"></div>
+                    <span className="text-gray-400 text-sm md:text-base">Oszczędność na agencjach:</span>
+                  </div>
+                  <span className="text-mind-content-blue font-medium whitespace-nowrap">+{Math.round(agencySavings).toLocaleString()} zł</span>
                 </div>
               </div>
             </div>
 
-            {/* CTA BUTTON */}
-            <div className="mt-8">
-              <button 
-                onClick={() => {
-                  const contactSection = document.getElementById('contact');
-                  contactSection?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="w-full bg-mind-green hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-3"
-              >
-                <DollarSign size={20} />
-                Porozmawiajmy o liczbach
-                <ArrowRight size={20} />
-              </button>
-            </div>
+            <button 
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="w-full bg-white text-mind-content-primary font-bold py-4 rounded-xl hover:bg-gray-100 transition-all hover:shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2 group"
+            >
+              Umów rozmowę o finansach
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform text-mind-content-blue"/>
+            </button>
+            
+            <p className="text-[10px] text-center text-gray-500 mt-4 opacity-60">
+              *Szacunki orientacyjne. Ostateczna wycena zależy od zakresu współpracy i potrzeb Twojej firmy.
+            </p>
           </div>
+
         </div>
       </div>
     </section>
