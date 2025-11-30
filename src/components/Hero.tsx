@@ -28,7 +28,7 @@ const Hero = () => {
             Twój biznes rośnie, <br />
             a procesy HR stoją w miejscu? <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-mind-content-blue to-mind-green">
-              Zyskaj Senior HR Managera
+              Zyskaj HR Managera
             </span> <br />
             na ułamek etatu.
           </h1>
