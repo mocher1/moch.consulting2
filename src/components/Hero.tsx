@@ -30,7 +30,7 @@ const Hero = () => {
           
           {/* Podtytuł - szerszy dla lepszego układu */}
           <p className="text-xl md:text-2xl text-mind-content-secondary mb-10 leading-relaxed max-w-3xl mx-auto">
-            Wchodzę do firmy, układam chaos, wdrażam standardy (Lean/AI) i rekrutuję kluczowe talenty. Działam jak członek Twojego zarządu, ale bez kosztów pełnego etatu.
+            Wchodzę do firmy, układam chaos, wdrażam standardy i rekrutuję kluczowe talenty. Działam jak członek Twojego zarządu, ale bez kosztów pełnego etatu.
           </p>
 
           {/* AUTHORITY BADGES - Wyśrodkowane */}
