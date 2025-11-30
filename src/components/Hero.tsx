@@ -17,12 +17,6 @@ const Hero = () => {
         
         {/* Główny kontener z animacją wejścia */}
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          
-          {/* Badge nad nagłówkiem - wyśrodkowany */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-mind-content-blue mb-8 mx-auto">
-            <Zap size={14} className="animate-pulse" />
-            <span className="text-xs font-bold tracking-wide uppercase">Fractional HR & Interim Management</span>
-          </div>
 
           {/* Nagłówek H1 - potężny i centralny */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-mind-content-primary mb-8 leading-[1.15] tracking-tight">
