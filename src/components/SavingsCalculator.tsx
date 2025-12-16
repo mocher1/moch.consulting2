@@ -31,11 +31,11 @@ const SavingsCalculator = () => {
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl md:text-5xl font-bold text-mind-content-primary mb-6">
             Policzmy to uczciwie: <br/>
-            <span className="text-mind-content-blue">Etat vs. Mój Abonament</span>
+            <span className="text-mind-content-blue">Etat vs. mój abonament</span>
           </h2>
           <p className="text-xl text-mind-content-secondary max-w-3xl mx-auto leading-relaxed">
             Nie potrzebujesz HR Managera na pełen etat, żeby mieć poukładane procesy. <br/>
-            W modelu abonamentowym zyskujesz Senior Eksperta w cenie Juniora.
+            W modelu abonamentowym zyskujesz Eksperta w cenie Juniora.
           </p>
         </div>
 
