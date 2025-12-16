@@ -5,7 +5,7 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 const pillars = [
   {
     icon: LayoutDashboard,
-    title: 'Codzienne Operacje HR',
+    title: 'Codzienne operacje HR',
     description: 'Przejmuję "bieżączkę", która zatyka Twój kalendarz. Onboardingi, offboardingi, rozwiązywanie konfliktów w zespole, ankiety satysfakcji i 1:1 z pracownikami.',
     benefit: 'Zyskujesz spokój i czas na rozwój biznesu.'
   },
@@ -17,7 +17,7 @@ const pillars = [
   },
   {
     icon: Cog,
-    title: 'Strategia i Procesy (Lean)',
+    title: 'Strategia i procesy (Lean)',
     description: 'Nie tylko "gaszę pożary", ale buduję system, żeby nie wybuchały. Wdrażam ścieżki rozwoju, siatki płac, oceny okresowe i automatyzację HR.',
     benefit: 'Firma staje się skalowalna i gotowa na wzrost.'
   }
