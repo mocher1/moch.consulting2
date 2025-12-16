@@ -6,7 +6,7 @@ const industries = [
   {
     icon: Code2,
     name: 'Software Houses & IT',
-    desc: 'Rozumiem specyfikę pracy z programistami. Wiem, czym różni się Senior od Mida, jak rekrutować w Stacku JS/Python i jak budować kulturę remote-first.'
+    desc: 'Rozumiem specyfikę pracy z programistami. Wiem, czym różni się Senior od Mida, jak rekrutować w osoby techniczne i jak budować kulturę organizacyjną.'
   },
   {
     icon: Rocket,
@@ -36,7 +36,7 @@ const Industries = () => {
             Gdzie sprawdzam się najlepiej?
           </h2>
           <p className="text-xl text-mind-content-secondary max-w-2xl mx-auto">
-            Nie jestem dla każdego. Specjalizuję się w firmach technologicznych i usługowych, które chcą rosnąć mądrze.
+            Moje doświadczenie i wizja HR nie sprawdzą się wszędzie. Specjalizuję się w firmach technologicznych i usługowych, które chcą rosnąć mądrze.
           </p>
         </div>
 
