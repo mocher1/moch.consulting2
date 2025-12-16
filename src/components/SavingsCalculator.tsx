@@ -108,7 +108,7 @@ const SavingsCalculator = () => {
              <div className="absolute bottom-0 left-0 w-64 h-64 bg-mind-green rounded-full blur-[80px] opacity-10 translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
             
             <div>
-              <h3 className="text-lg font-medium text-gray-300 mb-2">Zostaje w firmie rocznie:</h3>
+              <h3 className="text-lg font-medium text-gray-300 mb-2">Rocznie zostanie w firmie:</h3>
               <div className="text-5xl md:text-6xl font-bold text-mind-green mb-10 tracking-tight">
                 {totalSavings > 0 ? totalSavings.toLocaleString() : 0} PLN
               </div>
@@ -127,7 +127,7 @@ const SavingsCalculator = () => {
                 <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg border border-white/20">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-mind-green"></div>
-                    <span className="text-white font-bold text-sm md:text-base">Abonament Moch:</span>
+                    <span className="text-white font-bold text-sm md:text-base"> Mój Abonament:</span>
                   </div>
                   <span className="text-white font-bold whitespace-nowrap">{fractionalCostYearly.toLocaleString()} zł</span>
                 </div>
