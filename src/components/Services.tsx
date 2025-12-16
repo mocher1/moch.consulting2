@@ -40,7 +40,7 @@ const Services = () => {
             <span className="text-mind-content-blue">Cały dział HR.</span>
           </h2>
           <p className="text-xl text-mind-content-secondary max-w-3xl mx-auto leading-relaxed tracking-tight">
-            W ramach stałej współpracy ryczałtowej (Fractional), biorę odpowiedzialność za trzy filary Twojej organizacji. Nie musisz wybierać – dostajesz kompletne wsparcie.
+            W ramach stałej współpracy ryczałtowej, biorę odpowiedzialność za trzy filary Twojej organizacji. Nie musisz wybierać - dostajesz kompletne wsparcie.
           </p>
         </div>
         
