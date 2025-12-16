@@ -118,7 +118,7 @@ const SavingsCalculator = () => {
                 <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg border border-white/5">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-red-400"></div>
-                    <span className="text-gray-300 text-sm md:text-base">Etat (HR Manager):</span>
+                    <span className="text-gray-300 text-sm md:text-base">Etat HR Managera:</span>
                   </div>
                   <span className="text-gray-300 font-medium whitespace-nowrap">~{Math.round(fullTimeCostYearly).toLocaleString()} zł</span>
                 </div>
