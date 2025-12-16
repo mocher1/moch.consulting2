@@ -109,7 +109,7 @@ const SavingsCalculator = () => {
             
             <div>
               <h3 className="text-lg font-medium text-gray-300 mb-2">Rocznie zostanie w firmie:</h3>
-              <div className="text-5xl md:text-8xl font-bold text-mind-green mb-10 tracking-tight">
+              <div className="text-5xl md:text-7xl font-bold text-mind-green mb-10 tracking-tight">
                 {totalSavings > 0 ? totalSavings.toLocaleString() : 0} PLN
               </div>
 
