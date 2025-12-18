@@ -14,12 +14,29 @@ const companies = [
 
 const Companies = () => {
   const [ref, isVisible] = useIntersectionObserver();
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [translateX, setTranslateX] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
 
   useEffect(() => {
+    const slideWidth = 100 / 3; // Each slide is 1/3 of container width
+    const totalSlides = companies.length;
+    
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % companies.length);
-    }, 3000);
+      setTranslateX(prev => {
+        const newTranslateX = prev - slideWidth;
+        
+        // When we reach the end of the first set, reset to beginning without transition
+        if (Math.abs(newTranslateX) >= slideWidth * totalSlides) {
+          setTimeout(() => {
+            setIsTransitioning(false);
+            setTranslateX(0);
+            setTimeout(() => setIsTransitioning(true), 50);
+          }, 500); // Wait for transition to complete
+        }
+        
+        return newTranslateX;
+      });
+    }, 2500);
     
     return () => clearInterval(interval);
   }, []);
@@ -40,10 +57,10 @@ const Companies = () => {
           {/* Desktop slider */}
           <div className="hidden md:block overflow-hidden">
             <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+              className={`flex ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''}`}
+              style={{ transform: `translateX(${translateX}%)` }}
             >
-              {[...companies, ...companies, ...companies].map((company, index) => (
+              {[...companies, ...companies].map((company, index) => (
                 <div key={index} className="flex-shrink-0 w-1/3 px-8">
                   <div className="bg-mind-surface-content-white rounded-2xl p-8 border border-mind-stroke-border-grey hover:border-mind-content-blue hover:shadow-lg transition-all duration-300 group">
                     <div className="h-24 flex items-center justify-center">
@@ -74,18 +91,16 @@ const Companies = () => {
             ))}
           </div>
 
-          {/* Dots indicator for desktop */}
-          <div className="hidden md:flex justify-center mt-8 space-x-2">
-            {companies.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? 'bg-mind-content-blue' : 'bg-mind-stroke-border-grey hover:bg-mind-content-secondary'
-                }`}
-                aria-label={`Przejdź do slajdu ${index + 1}`}
+          {/* Progress indicator for desktop */}
+          <div className="hidden md:flex justify-center mt-8">
+            <div className="w-32 h-1 bg-mind-stroke-border-grey rounded-full overflow-hidden">
+              <div 
+                className="h-full bg-mind-content-blue rounded-full transition-all duration-2500 ease-linear"
+                style={{ 
+                  width: `${((Math.abs(translateX) % (100/3 * companies.length)) / (100/3 * companies.length)) * 100}%`
+                }}
               />
-            ))}
+            </div>
           </div>
         </div>
       </div>
