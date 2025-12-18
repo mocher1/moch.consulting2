@@ -46,10 +46,6 @@ const About = () => {
 
                 {/* Pływające kafelki "Trust" */}
                 <div className="absolute top-10 right-10 bg-white p-4 rounded-xl shadow-lg animate-bounce-slow">
-                   <div className="flex items-center gap-2">
-                      <CheckCircle className="text-mind-green" size={20} />
-                      <span className="font-bold text-mind-content-primary">English C1</span>
-                   </div>
                 </div>
                 <div className="absolute bottom-10 left-10 bg-white p-4 rounded-xl shadow-lg animate-bounce-slow" style={{ animationDelay: '1s' }}>
                    <div className="flex items-center gap-2">
