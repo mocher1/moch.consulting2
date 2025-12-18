@@ -10,12 +10,6 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
-          {/* TEKST */}
-          <div className={`order-2 lg:order-1 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-50 text-green-700 font-bold text-xs uppercase tracking-wide mb-6">
-              <Coffee size={14} />
-              <span>HR z ludzką twarzą</span>
-            </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-mind-content-primary mb-6 leading-tight">
               Nie jestem "zewnętrznym konsultantem". <br/>
