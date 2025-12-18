@@ -33,7 +33,6 @@ const About = () => {
                  </a>
               </div>
             </div>
-          </div>
           
           {/* ZDJĘCIE / WIZUALIZACJA */}
           <div className={`order-1 lg:order-2 relative transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
