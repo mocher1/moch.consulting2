@@ -20,18 +20,18 @@ const About = () => {
               <p>
                 Moje doświadczenie z <strong>GOG.com (CD PROJEKT)</strong> czy <strong>PepsiCo</strong> nauczyło mnie jednego: procesy są dla ludzi, a nie ludzie dla procesów. Pomogę Ci zbudować firmę, w której ludzie chcą pracować, a biznes zarabia.
               </p>
-            </div>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-               <a 
-                 href="https://linkedin.com" 
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0A66C2] text-white rounded-lg font-semibold hover:bg-[#004182] transition-colors"
-               >
-                 <Linkedin size={20} />
-                 Zobacz mój profil
-               </a>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                 <a 
+                   href="https://linkedin.com" 
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0A66C2] text-white rounded-lg font-semibold hover:bg-[#004182] transition-colors"
+                 >
+                   <Linkedin size={20} />
+                   Zobacz mój profil
+                 </a>
+              </div>
             </div>
           </div>
           
