@@ -11,20 +11,9 @@ const LINKS_PL = [
   { href: "#contact", label: "Kontakt" },
 ];
 
-const LINKS_EN = [
-  { href: "#services", label: "Services" },
-  { href: "#industries", label: "Industries" },
-  { href: "#why", label: "Why Me" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#about", label: "About" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" }
-];
-
 export default function Navbar() {
   const location = useLocation();
-  const isEnglish = location.pathname.startsWith('/en');
-  const links = isEnglish ? LINKS_EN : LINKS_PL;
+  const links = LINKS_PL;
   const [active, setActive] = useState<string>("#");
 
   useEffect(() => {
@@ -48,9 +37,7 @@ export default function Navbar() {
 
   // Handle active state for route-based links
   useEffect(() => {
-    if (location.pathname === '/kalkulatory') {
-      setActive('/kalkulatory');
-    } else if (location.pathname === '/' || location.pathname === '/en') {
+    if (location.pathname === '/') {
       // Reset to default for home pages - will be handled by intersection observer
       setActive('#');
     }
@@ -96,75 +83,14 @@ export default function Navbar() {
             ))}
           </ul>
           
-          {/* Language Switcher */}
-          <div className="flex items-center gap-2 ml-4 border-l border-gray-200 pl-4">
-            <Link
-              to="/"
-              className={`flex items-center gap-1 px-2 py-1 rounded-md text-sm transition-colors ${
-                !isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black hover:bg-gray-100'
-              }`}
-            >
-              <svg width="16" height="12" viewBox="0 0 16 12" className="shrink-0">
-                <rect width="16" height="6" fill="#ffffff"/>
-                <rect y="6" width="16" height="6" fill="#dc143c"/>
-              </svg>
-              PL
-            </Link>
-            <Link
-              to="/en"
-              className={`flex items-center gap-1 px-2 py-1 rounded-md text-sm transition-colors ${
-                isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black hover:bg-gray-100'
-              }`}
-            >
-              <svg width="16" height="12" viewBox="0 0 16 12" className="shrink-0">
-                <rect width="16" height="12" fill="#012169"/>
-                <path d="M0 0l16 12M16 0L0 12" stroke="#ffffff" strokeWidth="1.5"/>
-                <path d="M0 0l16 12M16 0L0 12" stroke="#c8102e" strokeWidth="1"/>
-                <path d="M8 0v12M0 6h16" stroke="#ffffff" strokeWidth="2"/>
-                <path d="M8 0v12M0 6h16" stroke="#c8102e" strokeWidth="1.2"/>
-              </svg>
-              EN
-            </Link>
-          </div>
         </div>
         
         <a
           href="#contact"
           className="hidden lg:inline-flex text-sm px-4 py-2 rounded-xl bg-black text-white hover:opacity-90 focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 transition-all"
         >
-          {isEnglish ? 'Start Hiring' : 'Umów konsultację'}
+          Umów konsultację
         </a>
-        
-        {/* Mobile Language Switcher */}
-        <div className="md:hidden flex items-center gap-2">
-          <Link
-            to="/"
-            className={`flex items-center gap-1 px-2 py-1 rounded-md text-sm transition-colors ${
-              !isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black'
-            }`}
-          >
-            <svg width="16" height="12" viewBox="0 0 16 12" className="shrink-0">
-              <rect width="16" height="6" fill="#ffffff"/>
-              <rect y="6" width="16" height="6" fill="#dc143c"/>
-            </svg>
-            <span className="hidden sm:inline">PL</span>
-          </Link>
-          <Link
-            to="/en"
-            className={`flex items-center gap-1 px-2 py-1 rounded-md text-sm transition-colors ${
-              isEnglish ? 'bg-mind-content-blue text-white' : 'text-gray-600 hover:text-black'
-            }`}
-          >
-            <svg width="16" height="12" viewBox="0 0 16 12" className="shrink-0">
-              <rect width="16" height="12" fill="#012169"/>
-              <path d="M0 0l16 12M16 0L0 12" stroke="#ffffff" strokeWidth="1.5"/>
-              <path d="M0 0l16 12M16 0L0 12" stroke="#c8102e" strokeWidth="1"/>
-              <path d="M8 0v12M0 6h16" stroke="#ffffff" strokeWidth="2"/>
-              <path d="M8 0v12M0 6h16" stroke="#c8102e" strokeWidth="1.2"/>
-            </svg>
-            <span className="hidden sm:inline">EN</span>
-          </Link>
-        </div>
       </nav>
     </header>
   );
