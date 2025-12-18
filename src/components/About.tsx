@@ -10,13 +10,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-mind-content-primary mb-6 leading-tight">
-              Nie jestem "zewnętrznym konsultantem". <br/>
-              <span className="text-mind-content-blue">Jestem częścią Twojego zespołu.</span>
-            </h2>
-            
-            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+          <div className={`order-2 lg:order-1 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
               <p>
                 Wiele firm konsultingowych działa na zasadzie: "Zrób audyt, zostaw raport, wystaw fakturę". Ja działam inaczej. 
               </p>
