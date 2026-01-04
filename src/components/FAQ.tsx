@@ -1,23 +1,22 @@
 import React from 'react';
-import { Play } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const faqItems = [
   {
     question: "Czy 'Fractional HR' opłaca się małej firmie?",
-    videoId: "dQw4w9WgXcQ" // Placeholder YouTube video ID
+    answer: "Zdecydowanie. Zatrudnienie doświadczonego HR Managera (Seniora) to koszt rzędu 18-25 tys. PLN miesięcznie + narzuty. Junior z kolei nie ułoży procesów strategicznych. Jako Fractional HR wchodzę na ustaloną część etatu, dając Ci senioralne kompetencje (ex-CD PROJEKT, PepsiCo) za ułamek tej ceny. Płacisz za konkretne efekty i rozwiązywanie problemów, a nie za 'siedzenie w biurze' na pełen etat."
   },
   {
     question: "Jak wygląda proces wdrażania zmian w zespole?",
-    videoId: "dQw4w9WgXcQ" // Placeholder YouTube video ID
+    answer: "Nie robię rewolucji, która wystraszy zespół. Zaczynam od audytu i rozmów, by zrozumieć Waszą kulturę (DNA firmy). Zmiany wprowadzam ewolucyjnie, kładąc ogromny nacisk na transparentną komunikację. Ludzie muszą wiedzieć 'dlaczego' coś zmieniamy i co z tego będą mieli. Działam jak partner wewnątrz zespołu, a nie zewnętrzny audytor, co drastycznie zmniejsza opór przed zmianą."
   },
   {
     question: "Czy rekrutujesz też Juniorów?",
-    videoId: "dQw4w9WgXcQ" // Placeholder YouTube video ID
+    answer: "Tak, prowadzę procesy end-to-end na każde stanowisko. Jednak moją największą wartością dodaną jest to, że przy okazji takiej rekrutacji układam proces (standardy ogłoszeń, zadania rekrutacyjne, scoring), który zostaje w firmie. Dzięki temu kolejne rekrutacje na niższe szczeble Twój zespół będzie mógł często prowadzić już samodzielnie lub z moim minimalnym nadzorem."
   },
   {
     question: "Ile trwa audyt procesów HR?",
-    videoId: "dQw4w9WgXcQ" // Placeholder YouTube video ID
+    answer: "Szanuję Twój czas i budżet, więc nie tworzę dokumentów 'na półkę'. Wstępna diagnoza (HR Health Check) to zazwyczaj 1-2 dni robocze. Pełny przegląd procesów w firmie 30-50 osobowej zamykamy zazwyczaj w 2 tygodnie (w ramach bieżącej współpracy). Od razu po nim wdrażamy tzw. 'quick wins' – proste zmiany, które dają natychmiastowy, odczuwalny efekt w organizacji."
   }
 ];
 
@@ -29,10 +28,10 @@ const FAQ = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl font-semibold text-mind-content-primary mb-6 tracking-tight">
-            Częste pytania (Wideo)
+            Częste pytania
           </h2>
           <p className="text-xl text-mind-content-secondary max-w-3xl mx-auto leading-relaxed tracking-tight">
-            Zamiast czytać długie e-maile, posłuchaj moich konkretnych odpowiedzi.
+            Konkretne odpowiedzi na to, co najczęściej nurtuje Founderów i CEO przed podjęciem współpracy.
           </p>
         </div>
         
@@ -45,28 +44,13 @@ const FAQ = () => {
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="bg-mind-surface-content-white rounded-2xl p-6 border border-mind-stroke-border-grey group-hover:border-mind-content-blue group-hover:shadow-xl transition-all duration-300 h-full">
-                <h3 className="text-xl font-semibold text-mind-content-primary mb-6 tracking-tight leading-tight">
+              <div className="bg-mind-surface-content-white rounded-2xl p-8 border border-mind-stroke-border-grey hover:border-mind-content-blue hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <h3 className="text-xl font-semibold text-mind-content-primary mb-4 tracking-tight leading-tight">
                   {item.question}
                 </h3>
-                
-                <div className="relative aspect-video rounded-xl overflow-hidden bg-mind-surface-bg-grey border border-mind-stroke-border-grey">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${item.videoId}`}
-                    title={item.question}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                  
-                  {/* Play button overlay for visual appeal */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-16 h-16 bg-mind-content-blue/90 rounded-full flex items-center justify-center">
-                      <Play className="w-8 h-8 text-mind-surface-content-white ml-1" fill="currentColor" />
-                    </div>
-                  </div>
-                </div>
+                <p className="text-mind-content-secondary leading-relaxed text-lg">
+                  {item.answer}
+                </p>
               </div>
             </div>
           ))}
