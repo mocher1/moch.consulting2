@@ -33,7 +33,7 @@ const Hero = () => {
           </div>
           
           {/* Podtytuł - szerszy dla lepszego układu */}
-          <p className="text-lg md:text-xl text-mind-content-secondary/90 mb-16 leading-relaxed max-w-4xl mx-auto font-medium">
+          <p className="text-lg md:text-xl text-mind-content-secondary/90 mb-10 leading-relaxed max-w-4xl mx-auto font-medium">
             Wspieram founderów i zarządy firm 20–100 osób, pracując również bezpośrednio z managementem. <br />
           </p>
           
