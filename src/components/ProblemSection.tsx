@@ -63,7 +63,7 @@ const problems = [
          </div>
 
          {/* Closing Statement */}
-        <div className=\{`text-center max-w-4xl mx-auto transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`text-center max-w-4xl mx-auto transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="bg-mind-content-primary text-white p-6 md:p-8 rounded-2xl">
             <p className="text-lg md:text-xl leading-relaxed">
                W większości firm to nie są problemy narzędzi HR ani procesów.<br />

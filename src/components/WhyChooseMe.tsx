@@ -84,7 +84,7 @@ const reasons = [
          </div>
 
          {/* Bottom CTA */}
-        <div className={\`bg-mind-content-primary rounded-2xl p-6 md:p-8 text-white text-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`bg-mind-content-primary rounded-2xl p-6 md:p-8 text-white text-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h3 className="text-xl md:text-2xl font-bold mb-3">
              Gotowy na zmianę podejścia do HR?
            </h3>
