@@ -5,7 +5,7 @@ const LINKS_PL = [
   { href: "#jak-pracuje", label: "Jak pracuję" },
   { href: "#audyt", label: "Audyt Decyzji i Zarządzania Ludźmi" },
   { href: "#fractional", label: "Fractional Head of People" },
-  { href: "#kalkulator", label: "Kalkulator kosztu decyzji" },
+  { href: "/kalkulator-kosztu-decyzji", label: "Kalkulator kosztu decyzji" },
 ];
 
 export default function Navbar() {
@@ -70,12 +70,21 @@ export default function Navbar() {
           <ul className="flex items-center gap-6">
             {links.map(l => (
               <li key={l.href}>
-                <a
-                  href={l.href}
-                  className={`text-sm transition-colors ${active === l.href ? "text-black font-medium" : "text-gray-600 hover:text-black"}`}
-                >
-                  {l.label}
-                </a>
+                {l.href.startsWith('/') ? (
+                  <a
+                    href={l.href}
+                    className="text-sm transition-colors text-gray-600 hover:text-black"
+                  >
+                    {l.label}
+                  </a>
+                ) : (
+                  <a
+                    href={l.href}
+                    className={`text-sm transition-colors ${active === l.href ? "text-black font-medium" : "text-gray-600 hover:text-black"}`}
+                  >
+                    {l.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
