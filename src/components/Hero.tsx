@@ -20,17 +20,15 @@ const Hero = () => {
 
           {/* Nagłówek H1 - potężny i centralny */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-mind-content-primary mb-8 leading-[1.15] tracking-tight">
-            Twój biznes rośnie, <br />
-            a procesy HR stoją w miejscu? <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-mind-content-blue to-mind-green">
-              Zyskaj HR Managera
-            </span> <br />
-            na ułamek etatu.
+            Porządkuję decyzje dotyczące ludzi w firmach, <br />
+            w których <span className="text-transparent bg-clip-text bg-gradient-to-r from-mind-content-blue to-mind-green">HR przestał wspierać</span> <br />
+            decyzje biznesowe
           </h1>
           
           {/* Podtytuł - szerszy dla lepszego układu */}
-          <p className="text-xl md:text-2xl text-mind-content-secondary mb-10 leading-relaxed max-w-3xl mx-auto">
-            Wchodzę do firmy, układam chaos, wdrażam standardy i rekrutuję kluczowe talenty. Działam jak członek Twojego zespołu, ale bez kosztów pełnego etatu.
+          <p className="text-xl md:text-2xl text-mind-content-secondary mb-10 leading-relaxed max-w-4xl mx-auto">
+            Wspieram founderów i zarządy firm 20–100 osób, pracując również bezpośrednio z managementem. <br />
+            <strong className="text-mind-content-primary">Działam decyzyjnie, nie operacyjnie.</strong>
           </p>
           
           {/* CTA Buttons - Wyśrodkowane */}
@@ -40,17 +38,17 @@ const Hero = () => {
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <Calendar size={20} />
-              Umów darmową konsultację
+              Umów rozmowę i sprawdź, czy to ma sens
             </button>
             
             <button 
               className="group border border-gray-200 hover:border-mind-content-blue text-mind-content-primary bg-white hover:bg-blue-50/50 px-10 py-4 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-3"
               onClick={() => {
-                const element = document.getElementById('services');
+                const element = document.getElementById('jak-pracuje');
                 element?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Sprawdź ofertę
+              Jak pracuję
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
