@@ -22,7 +22,7 @@ const Hero = () => {
           <h1 className="text-3xl md:text-4xl lg:text-7xl font-black text-mind-content-primary mb-12 leading-[1.1] tracking-tight">
             Porządkuję decyzje dotyczące ludzi w firmach, <br />
             w których <span className="text-transparent bg-clip-text bg-gradient-to-r from-mind-content-blue to-mind-green">HR przestał wspierać</span> <br />
-            decyzje biznesowe
+            decyzje biznesowe!
           </h1>
           
           {/* Micro-line - subtelna linia wyjaśniająca */}
