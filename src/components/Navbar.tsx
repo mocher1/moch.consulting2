@@ -3,11 +3,9 @@ import { useLocation, Link } from "react-router-dom";
 
 const LINKS_PL = [
   { href: "#services", label: "Usługi" },
-  { href: "#industries", label: "Branże" },
   { href: "#why", label: "Dlaczego ja" },
   { href: "#testimonials", label: "Opinie" },
   { href: "#about", label: "O mnie" },
-  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Kontakt" },
 ];
 

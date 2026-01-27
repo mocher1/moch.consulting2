@@ -18,9 +18,8 @@ const Footer: React.FC<FooterProps> = ({ lang }) => {
       linksTitle: 'Nawigacja',
       links: [
         { label: 'Oferta Fractional', href: '#services' },
-        { label: 'Kalkulator Oszczędności', href: '#calculator' }, // Upewnij się, że SavingsCalculator ma id="calculator"
         { label: 'Dlaczego ja?', href: '#about' },
-        { label: 'FAQ', href: '#faq' },
+        { label: 'Kontakt', href: '#contact' },
       ],
       contactTitle: 'Kontakt',
       rights: 'Wszelkie prawa zastrzeżone.',

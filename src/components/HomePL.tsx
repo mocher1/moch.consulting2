@@ -1,13 +1,10 @@
 import React from 'react';
 import Hero from './Hero';
 import Services from './Services';
-import SavingsCalculator from './SavingsCalculator';
-import Industries from './Industries';
 import Companies from './Companies';
 import WhyChooseMe from './WhyChooseMe';
 import Testimonials from './Testimonials';
 import About from './About';
-import FAQ from './FAQ';
 import Contact from './Contact';
 import Footer from './Footer';
 
@@ -16,13 +13,10 @@ const HomePL = () => {
     <main className="pt-14 min-h-screen bg-mind-surface-content-white font-sans">
       <Hero />
       <Services />
-      <SavingsCalculator />
-      <Industries />
       <Companies />
       <WhyChooseMe />
       <Testimonials />
       <About />
-      <FAQ />
       <Contact />
       <Footer lang="pl" />
     </main>
