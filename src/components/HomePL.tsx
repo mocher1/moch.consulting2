@@ -7,6 +7,7 @@ import Companies from './Companies';
 import WhyChooseMe from './WhyChooseMe';
 import Testimonials from './Testimonials';
 import About from './About';
+import FinalCTA from './FinalCTA';
 import Contact from './Contact';
 import Footer from './Footer';
 
@@ -21,6 +22,7 @@ const HomePL = () => {
       <WhyChooseMe />
       <Testimonials />
       <About />
+      <FinalCTA />
       <Contact />
       <Footer lang="pl" />
     </main>
