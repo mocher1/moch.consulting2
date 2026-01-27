@@ -1,4 +1,3 @@
-@@ .. @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Calendar, Zap, Briefcase, TrendingUp } from 'lucide-react';
 
