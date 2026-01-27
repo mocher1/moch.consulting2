@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from './Hero';
 import DecisionVsOperationsSection from './DecisionVsOperationsSection';
 import ProblemSection from './ProblemSection';
+import AuditSection from './AuditSection';
 import Companies from './Companies';
 import WhyChooseMe from './WhyChooseMe';
 import Testimonials from './Testimonials';
@@ -15,6 +16,7 @@ const HomePL = () => {
       <Hero />
       <DecisionVsOperationsSection />
       <ProblemSection />
+      <AuditSection />
       <Companies />
       <WhyChooseMe />
       <Testimonials />
