@@ -148,32 +148,32 @@ const DecisionCostCalculator = () => {
                <div className="absolute bottom-0 left-0 w-64 h-64 bg-mind-green rounded-full blur-[80px] opacity-10 translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
               
               <div>
-                <h3 className="text-lg font-medium text-gray-300 mb-2">Szacowany roczny koszt opóźnionych lub błędnych decyzji:</h3>
-                <div className="text-5xl md:text-7xl font-bold text-mind-green mb-10 tracking-tight">
+                <h3 className="text-base font-medium text-gray-400 mb-6">Szacowany roczny koszt opóźnionych lub błędnych decyzji:</h3>
+                <div className="text-6xl md:text-8xl font-black text-white mb-16 tracking-tight leading-none">
                   {totalAnnualCost > 0 ? totalAnnualCost.toLocaleString() : 0} PLN
                 </div>
 
-                <div className="space-y-4 mb-10">
+                <div className="space-y-3 mb-12">
                   {/* Cost breakdown */}
-                  <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg border border-white/5">
+                  <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg border border-white/20">
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-red-400"></div>
+                      <div className="w-3 h-3 rounded-full bg-gray-400"></div>
                       <span className="text-gray-300 text-sm md:text-base">Opóźniona rekrutacja:</span>
                     </div>
-                    <span className="text-gray-300 font-medium whitespace-nowrap">{Math.round(delayedHiringCost).toLocaleString()} zł</span>
+                    <span className="text-white font-bold whitespace-nowrap">{Math.round(delayedHiringCost).toLocaleString()} zł</span>
                   </div>
 
-                  <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg border border-white/5">
+                  <div className="flex justify-between items-center p-4 bg-white/10 rounded-lg border border-white/20">
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-orange-400"></div>
+                      <div className="w-3 h-3 rounded-full bg-gray-400"></div>
                       <span className="text-gray-300 text-sm md:text-base">Błędne zatrudnienia:</span>
                     </div>
-                    <span className="text-gray-300 font-medium whitespace-nowrap">{Math.round(wrongHireCost).toLocaleString()} zł</span>
+                    <span className="text-white font-bold whitespace-nowrap">{Math.round(wrongHireCost).toLocaleString()} zł</span>
                   </div>
 
-                  <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg border border-white/20">
+                  <div className="flex justify-between items-center p-4 bg-white/20 rounded-lg border border-white/30">
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-mind-content-blue"></div>
+                      <div className="w-3 h-3 rounded-full bg-mind-green"></div>
                       <span className="text-white font-bold text-sm md:text-base">Koszt alternatywny foundera:</span>
                     </div>
                     <span className="text-white font-bold whitespace-nowrap">{Math.round(founderOpportunityCost).toLocaleString()} zł</span>
@@ -182,12 +182,12 @@ const DecisionCostCalculator = () => {
               </div>
 
               {/* CTA Section */}
-              <div className="space-y-4">
-                <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm border border-white/10 mb-6">
-                  <p className="text-lg font-medium mb-4 text-center">
+              <div className="space-y-6">
+                <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm border border-white/20 mb-8">
+                  <p className="text-xl font-medium mb-4 text-center">
                     Chcesz zrozumieć, skąd dokładnie biorą się te koszty?
                   </p>
-                  <p className="text-sm text-gray-300 text-center">
+                  <p className="text-base text-gray-300 text-center leading-relaxed">
                     Audyt Decyzji i Zarządzania Ludźmi pozwala to rozłożyć na konkretne decyzje.
                   </p>
                 </div>
@@ -197,22 +197,22 @@ const DecisionCostCalculator = () => {
                     const element = document.getElementById('audyt');
                     element?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="w-full bg-white text-mind-content-primary font-bold py-4 rounded-xl hover:bg-gray-100 transition-all hover:shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2 group mb-3"
+                  className="w-full bg-white text-mind-content-primary font-bold py-5 rounded-xl hover:bg-gray-100 transition-all hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3 group mb-4"
                 >
                   Zobacz audyt
-                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform text-mind-content-blue"/>
+                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform"/>
                 </button>
 
                 <button 
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full bg-transparent border-2 border-white text-white font-semibold py-4 rounded-xl hover:bg-white hover:text-mind-content-primary transition-all flex items-center justify-center gap-2 group"
+                  className="w-full bg-transparent border-2 border-white/50 text-white font-semibold py-5 rounded-xl hover:bg-white hover:text-mind-content-primary transition-all flex items-center justify-center gap-3 group"
                 >
                   <Calendar size={20} />
                   Umów rozmowę
                 </button>
               </div>
               
-              <p className="text-[10px] text-center text-gray-500 mt-4 opacity-60">
+              <p className="text-xs text-center text-gray-500 mt-6 opacity-60">
                 *Szacunki oparte na typowych kosztach decyzji w firmach 20-100 osób.
               </p>
             </div>
