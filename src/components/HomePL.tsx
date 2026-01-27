@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './Hero';
-import Services from './Services';
+import DecisionVsOperationsSection from './DecisionVsOperationsSection';
+import ProblemSection from './ProblemSection';
 import Companies from './Companies';
 import WhyChooseMe from './WhyChooseMe';
 import Testimonials from './Testimonials';
@@ -12,7 +13,8 @@ const HomePL = () => {
   return (
     <main className="pt-14 min-h-screen bg-mind-surface-content-white font-sans">
       <Hero />
-      <Services />
+      <DecisionVsOperationsSection />
+      <ProblemSection />
       <Companies />
       <WhyChooseMe />
       <Testimonials />
