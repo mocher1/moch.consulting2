@@ -35,7 +35,6 @@ const Hero = () => {
           {/* Podtytuł - szerszy dla lepszego układu */}
           <p className="text-lg md:text-xl text-mind-content-secondary/90 mb-16 leading-relaxed max-w-4xl mx-auto font-medium">
             Wspieram founderów i zarządy firm 20–100 osób, pracując również bezpośrednio z managementem. <br />
-            <strong className="text-mind-content-primary">Działam decyzyjnie, nie operacyjnie.</strong>
           </p>
           
           {/* CTA Buttons - Wyśrodkowane */}
