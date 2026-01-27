@@ -26,9 +26,9 @@ const Hero = () => {
           </h1>
           
           {/* Micro-line - subtelna linia wyjaśniająca */}
-          <div className="mb-10">
+          <div className="mb-1">
             <p className="text-lg md:text-xl text-mind-content-secondary/80 max-w-4xl mx-auto leading-relaxed font-light">
-              Pomagam podejmować trudne decyzje dotyczące ról, zespołów i wynagrodzeń — zamiast dokładania kolejnych procesów HR.
+              Pomagam podejmować trudne decyzje dotyczące ról, zespołów i wynagrodzeń - zamiast dokładania kolejnych procesów HR.
             </p>
           </div>
           
