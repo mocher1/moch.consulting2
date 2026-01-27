@@ -1,4 +1,3 @@
-@@ .. @@
 import React, { useEffect, useState } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
@@ -43,17 +42,13 @@ const companies = [
    }, []);
 
    return (
--    <section ref={ref} className="py-24 bg-mind-surface-bg-grey">
-+    <section ref={ref} className="py-16 bg-white">
+    <section ref={ref} className="py-16 bg-white">
        <div className="max-w-7xl mx-auto px-6">
--        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
--          <h2 className="text-4xl md:text-5xl font-semibold text-mind-content-primary mb-6 tracking-tight">
-+        <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-+          <h2 className="text-2xl md:text-3xl font-semibold text-mind-content-primary mb-4 tracking-tight">
+        <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-2xl md:text-3xl font-semibold text-mind-content-primary mb-4 tracking-tight">
              Wybrane firmy, z którymi pracowałem
            </h2>
--          <p className="text-xl text-mind-content-secondary max-w-3xl mx-auto leading-relaxed tracking-tight">
-+          <p className="text-base text-mind-content-secondary/80 max-w-3xl mx-auto leading-relaxed tracking-tight">
+          <p className="text-base text-mind-content-secondary/80 max-w-3xl mx-auto leading-relaxed tracking-tight">
              Zbierałem doświadczenie w organizacjach różnych wielkości - od startupów po międzynarodowe korporacje.
            </p>
          </div>
@@ -66,17 +61,13 @@ const companies = [
                style={{ transform: `translateX(${translateX}%)` }}
              >
                {[...companies, ...companies].map((company, index) => (
--                <div key={index} className="flex-shrink-0 w-1/3 px-8">
--                  <div className="bg-mind-surface-content-white rounded-2xl p-8 border border-mind-stroke-border-grey hover:border-mind-content-blue hover:shadow-lg transition-all duration-300 group">
--                    <div className="h-24 flex items-center justify-center">
-+                <div key={index} className="flex-shrink-0 w-1/3 px-6">
-+                  <div className="bg-mind-surface-content-white rounded-xl p-6 border border-mind-stroke-border-grey hover:border-gray-300 transition-all duration-300 group">
-+                    <div className="h-16 flex items-center justify-center">
+                <div key={index} className="flex-shrink-0 w-1/3 px-6">
+                  <div className="bg-mind-surface-content-white rounded-xl p-6 border border-mind-stroke-border-grey hover:border-gray-300 transition-all duration-300 group">
+                    <div className="h-16 flex items-center justify-center">
                        <img
                          src={company.logo}
                          alt={`Logo ${company.name}`}
--                        className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 opacity-60 group-hover:opacity-100"
-+                        className="w-full h-full object-contain filter grayscale transition-all duration-300 opacity-50"
+                        className="w-full h-full object-contain filter grayscale transition-all duration-300 opacity-50"
                        />
                      </div>
                    </div>
@@ -86,35 +77,20 @@ const companies = [
            </div>
 
            {/* Mobile grid */}
--          <div className="md:hidden grid grid-cols-2 gap-4">
-+          <div className="md:hidden grid grid-cols-2 gap-3">
+          <div className="md:hidden grid grid-cols-2 gap-3">
              {companies.map((company, index) => (
--              <div key={index} className="bg-mind-surface-content-white rounded-2xl p-6 border border-mind-stroke-border-grey">
--                <div className="h-16 flex items-center justify-center">
-+              <div key={index} className="bg-mind-surface-content-white rounded-xl p-4 border border-mind-stroke-border-grey">
-+                <div className="h-12 flex items-center justify-center">
+              <div key={index} className="bg-mind-surface-content-white rounded-xl p-4 border border-mind-stroke-border-grey">
+                <div className="h-12 flex items-center justify-center">
                    <img
                      src={company.logo}
                      alt={`Logo ${company.name}`}
--                    className="w-full h-full object-contain filter grayscale opacity-60"
-+                    className="w-full h-full object-contain filter grayscale opacity-50"
+                    className="w-full h-full object-contain filter grayscale opacity-50"
                    />
                  </div>
                </div>
              ))}
            </div>
 
--          {/* Progress indicator for desktop */}
--          <div className="hidden md:flex justify-center mt-8">
--            <div className="w-32 h-1 bg-mind-stroke-border-grey rounded-full overflow-hidden">
--              <div 
--                className="h-full bg-mind-content-blue rounded-full transition-all duration-2500 ease-linear"
--                style={{ 
--                  width: `${((Math.abs(translateX) % (100/3 * companies.length)) / (100/3 * companies.length)) * 100}%`
--                }}
--              />
--            </div>
--          </div>
          </div>
        </div>
      </section>
