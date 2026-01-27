@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 
 const LINKS_PL = [
-  { href: "#services", label: "Usługi" },
-  { href: "#why", label: "Dlaczego ja" },
-  { href: "#testimonials", label: "Opinie" },
-  { href: "#about", label: "O mnie" },
-  { href: "#contact", label: "Kontakt" },
+  { href: "#jak-pracuje", label: "Jak pracuję" },
+  { href: "#audyt", label: "Audyt Decyzji i Zarządzania Ludźmi" },
+  { href: "#fractional", label: "Fractional Head of People" },
+  { href: "#kalkulator", label: "Kalkulator kosztu decyzji" },
 ];
 
 export default function Navbar() {
@@ -87,7 +86,7 @@ export default function Navbar() {
           href="#contact"
           className="hidden lg:inline-flex text-sm px-4 py-2 rounded-xl bg-black text-white hover:opacity-90 focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 transition-all"
         >
-          Umów konsultację
+          Umów rozmowę
         </a>
       </nav>
     </header>
