@@ -4,7 +4,6 @@ import { useLocation, Link } from "react-router-dom";
 const LINKS_PL = [
   { href: "#jak-pracuje", label: "Jak pracuję" },
   { href: "#audyt", label: "Audyt Decyzji i Zarządzania Ludźmi" },
-  { href: "#fractional", label: "Fractional Head of People" },
   { href: "/kalkulator-kosztu-decyzji", label: "Kalkulator kosztu decyzji" },
 ];
 
