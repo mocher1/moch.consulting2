@@ -13,7 +13,7 @@ const Hero = () => {
       {/* Tło dekoracyjne - subtelne, centralne */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-mind-content-blue/5 via-transparent to-transparent pointer-events-none"></div>
       
-      <div className="relative max-w-6xl mx-auto text-center z-10">
+      <div className="relative max-w-6xl mx-auto text-center z-10 pt-16">
         
         {/* Główny kontener z animacją wejścia */}
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
