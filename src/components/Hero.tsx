@@ -19,7 +19,7 @@ const Hero = () => {
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 
           {/* Nagłówek H1 - potężny i centralny */}
-          <h1 className="text-3xl md:text-4xl lg:text-6xl font-black text-mind-content-primary mb-12 leading-[1.1] tracking-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-8xl font-black text-mind-content-primary mb-12 leading-[1.1] tracking-tight">
             Porządkuję decyzje dotyczące ludzi w firmach, <br />
             w których <span className="text-transparent bg-clip-text bg-gradient-to-r from-mind-content-blue to-mind-green">HR przestał wspierać</span> <br />
             decyzje biznesowe
