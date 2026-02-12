@@ -2,9 +2,13 @@ import { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 
 const LINKS_PL = [
-  { href: "#jak-pracuje", label: "Jak pracuję" },
-  { href: "#audyt", label: "Audyt Decyzji i Zarządzania Ludźmi" },
-  { href: "/kalkulator-kosztu-decyzji", label: "Kalkulator kosztu decyzji" },
+  { href: "#services", label: "Usługi" },
+  { href: "#industries", label: "Branże" },
+  { href: "#why", label: "Dlaczego ja" },
+  { href: "#testimonials", label: "Opinie" },
+  { href: "#about", label: "O mnie" },
+  { href: "#faq", label: "FAQ" },
+  { href: "#contact", label: "Kontakt" },
 ];
 
 export default function Navbar() {
@@ -69,21 +73,12 @@ export default function Navbar() {
           <ul className="flex items-center gap-6">
             {links.map(l => (
               <li key={l.href}>
-                {l.href.startsWith('/') ? (
-                  <a
-                    href={l.href}
-                    className="text-sm transition-colors text-gray-600 hover:text-black"
-                  >
-                    {l.label}
-                  </a>
-                ) : (
-                  <a
-                    href={l.href}
-                    className={`text-sm transition-colors ${active === l.href ? "text-black font-medium" : "text-gray-600 hover:text-black"}`}
-                  >
-                    {l.label}
-                  </a>
-                )}
+                <a
+                  href={l.href}
+                  className={`text-sm transition-colors ${active === l.href ? "text-black font-medium" : "text-gray-600 hover:text-black"}`}
+                >
+                  {l.label}
+                </a>
               </li>
             ))}
           </ul>
@@ -94,7 +89,7 @@ export default function Navbar() {
           href="#contact"
           className="hidden lg:inline-flex text-sm px-4 py-2 rounded-xl bg-black text-white hover:opacity-90 focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 transition-all"
         >
-          Umów rozmowę
+          Umów konsultację
         </a>
       </nav>
     </header>

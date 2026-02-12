@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, Calendar, Zap, Briefcase, TrendingUp } from 'lucide-react';
+import { ArrowRight, Calendar, Terminal } from 'lucide-react';
 
-const Hero = () => {
+const HeroEN = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -17,21 +17,39 @@ const Hero = () => {
         
         {/* Główny kontener z animacją wejścia */}
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          
+          {/* Badge nad nagłówkiem - wyśrodkowany */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-mind-content-blue mb-8 mx-auto">
+            <Terminal size={14} className="animate-pulse" />
+            <span className="text-xs font-bold tracking-wide uppercase">IT & Tech Recruitment Specialist</span>
+          </div>
 
           {/* Nagłówek H1 - potężny i centralny */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-mind-content-primary mb-8 leading-[1.15] tracking-tight">
-            Twój biznes rośnie, <br />
-            a procesy HR stoją w miejscu? <br />
+          <h1 className="text-5xl md:text-7xl font-bold text-mind-content-primary mb-8 leading-[1.1] tracking-tight">
+            Your Strategic <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-mind-content-blue to-mind-green">
-              Zyskaj HR Managera
+              IT Recruitment Partner
             </span> <br />
-            na ułamek etatu.
+            in Poland.
           </h1>
           
-          {/* Podtytuł - szerszy dla lepszego układu */}
+          {/* Podtytuł - szerszy (max-w-3xl) dla lepszego układu */}
           <p className="text-xl md:text-2xl text-mind-content-secondary mb-10 leading-relaxed max-w-3xl mx-auto">
-            Wchodzę do firmy, układam chaos, wdrażam standardy i rekrutuję kluczowe talenty. Działam jak członek Twojego zespołu, ale bez kosztów pełnego etatu.
+            I don't just send resumes. I connect global tech companies with world-class Polish engineers. Direct communication, deep technical understanding, and <strong>zero agency fluff</strong>.
           </p>
+
+          {/* AUTHORITY BADGES - Wyśrodkowane */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12 text-sm font-medium text-gray-500">
+             <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-xl border border-gray-100 shadow-sm transition-transform hover:-translate-y-1">
+                <span className="text-mind-content-primary font-bold">Ex-CD PROJEKT Group</span>
+             </div>
+             <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-xl border border-gray-100 shadow-sm transition-transform hover:-translate-y-1">
+                <span className="text-mind-content-primary font-bold">Technical Sourcing</span>
+             </div>
+             <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-xl border border-gray-100 shadow-sm transition-transform hover:-translate-y-1">
+                <span className="text-mind-content-primary font-bold">Senior Roles Focus</span>
+             </div>
+          </div>
           
           {/* CTA Buttons - Wyśrodkowane */}
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
@@ -40,7 +58,7 @@ const Hero = () => {
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <Calendar size={20} />
-              Umów darmową konsultację
+              Book a Call
             </button>
             
             <button 
@@ -50,7 +68,7 @@ const Hero = () => {
                 element?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Sprawdź ofertę
+              How I Work
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -61,4 +79,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroEN;

@@ -1,13 +1,13 @@
 import React from 'react';
 import Hero from './Hero';
-import DecisionVsOperationsSection from './DecisionVsOperationsSection';
-import ProblemSection from './ProblemSection';
-import AuditSection from './AuditSection';
+import Services from './Services';
+import SavingsCalculator from './SavingsCalculator';
+import Industries from './Industries';
 import Companies from './Companies';
 import WhyChooseMe from './WhyChooseMe';
 import Testimonials from './Testimonials';
 import About from './About';
-import FinalCTA from './FinalCTA';
+import FAQ from './FAQ';
 import Contact from './Contact';
 import Footer from './Footer';
 
@@ -15,14 +15,14 @@ const HomePL = () => {
   return (
     <main className="pt-14 min-h-screen bg-mind-surface-content-white font-sans">
       <Hero />
-      <DecisionVsOperationsSection />
-      <ProblemSection />
-      <AuditSection />
+      <Services />
+      <SavingsCalculator />
+      <Industries />
       <Companies />
       <WhyChooseMe />
       <Testimonials />
       <About />
-      <FinalCTA />
+      <FAQ />
       <Contact />
       <Footer lang="pl" />
     </main>

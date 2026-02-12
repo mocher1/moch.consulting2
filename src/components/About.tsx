@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Coffee } from 'lucide-react';
+import { Linkedin, CheckCircle, Coffee } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const About = () => {
@@ -11,10 +11,29 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
           <div className={`order-2 lg:order-1 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            <p className="text-xl text-mind-content-secondary leading-relaxed">
-              Od ponad 10 lat wspieram liderów i zarządy firm technologicznych i usługowych w podejmowaniu lepszych decyzji dotyczących ludzi, ról i zespołów.
-            </p>
+              <p>
+                Wiele firm konsultingowych działa na zasadzie: "Zrób audyt, zostaw raport, wystaw fakturę". Ja działam inaczej. 
+              </p>
+              <p>
+                Jako <strong>Fractional HR Manager</strong> wchodzę w Twoje struktury. Mam firmowego maila, jestem na Twoim Slacku, znam imiona Twoich pracowników. Rozwiązuję problemy na bieżąco, zanim staną się pożarami.
+              </p>
+              <p>
+                Moje doświadczenie z <strong>GOG.com (CD PROJEKT)</strong> czy <strong>PepsiCo</strong> nauczyło mnie jednego: procesy są dla ludzi, a nie ludzie dla procesów. Pomogę Ci zbudować firmę, w której ludzie chcą pracować, a biznes zarabia.
+              </p>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                 <a 
+                   href="https://linkedin.com" 
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0A66C2] text-white rounded-lg font-semibold hover:bg-[#004182] transition-colors"
+                 >
+                   <Linkedin size={20} />
+                   Zobacz mój profil
+                 </a>
+              </div>
             </div>
+          </div>
           
           {/* ZDJĘCIE / WIZUALIZACJA */}
           <div className={`order-1 lg:order-2 relative transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
@@ -28,6 +47,10 @@ const About = () => {
 
                 {/* Pływające kafelki "Trust" */}
                 <div className="absolute top-10 right-10 bg-white p-4 rounded-xl shadow-lg animate-bounce-slow">
+                   <div className="flex items-center gap-2">
+                      <CheckCircle className="text-mind-green" size={20} />
+                      <span className="font-bold text-mind-content-primary">English C1</span>
+                   </div>
                 </div>
                 <div className="absolute bottom-10 left-10 bg-white p-4 rounded-xl shadow-lg animate-bounce-slow" style={{ animationDelay: '1s' }}>
                    <div className="flex items-center gap-2">
